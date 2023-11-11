@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%static 'about_us.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sidebar_css/sidebar.css' %}">
+    <link rel="icon" href="{% static 'img/NetScuela-icon.svg' %}">
+
+    <title>About Us!</title>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <!-- SVG image -->
+    <img src="{%static 'img/NetScuela-icon.svg'%}" alt="SVG Image" class="svg-image">
+
+    <!-- Navbar name -->
+    <span class="navbar-name">NetScuela</span>
+
+  </div>
+
+
+      <div class="container">
+      <!-- Image container on the right -->
+        <div class="image-container">
+          <img src="{%static 'img/about_us.png'%}" alt="Image" class="img-fluid">
+        </div>
+
+      <!-- Text container on the left -->
+        <div class="text-container">
+          <p class="title">INNOVATE YOUR EDUCATION WITH NETSCUELA</p>
+          <h1>ABOUT NETSCUELA</h1>
+          <p class="description">
+            Welcome to NetScuela! Here, we invite you to delve deeper into the heart of our organization, where innovation in education technology is at the core of everything we do. At NetScuela, we're driven by a passion for enhancing the teaching and learning experience.
+
+          </p>
+          <p class="description">
+            Our dedicated team of educators, technologists, and visionaries collaborate tirelessly to create a dynamic and user-friendly platform that empowers educators and learners worldwide. Within these pages, you'll uncover the essence of our mission, the faces behind our platform, and the commitment to excellence that propels us forward.
+          </p>
+
+          <p class="description">Join us on this journey as we continue to redefine the landscape of digital education and empower educators and students with the tools they need to succeed. We're excited to have you as part of the NetScuela community!</p>
+
+          <button><a href="{% url 'home'  %}">Back to Home</a></button>
+        </div>
+
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2023 NetScuela</p>
+    </footer>
+
+    <script src="{%static 'js/about.js'%}"></script>
+  </body>
+</html>

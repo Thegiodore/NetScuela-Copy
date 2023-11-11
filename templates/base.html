@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'base_css\base.css' %}" rel='stylesheet'>
+    </head>
+    <body>
+        <div id='header'>
+            <img class="logo" src="{%static 'img/NetScuela-icon.svg'%}">
+            {% if request.user.is_authenticated %}
+            <ul class='menu'>
+                <li {% if section == "dashboard" %}class='selected'{% endif %}>
+                    <a href="{% url 'dashboard' %}">My dashboard</a>
+                </li>
+                <li {% if section == "dashboard" %}class='selected'{% endif %}>
+                    <a href="{% url 'dashboard' %}">Course Shells</a>
+                </li>
+                <li {% if section == "Calendar" %}class='selected'{% endif %}>
+                    <a href="{% url 'calendar' %}">Calendar</a>
+                </li>
+                <li {% if section == "dashboard" %}class='selected'{% endif %}>
+                    <a href="{% url 'dashboard' %}">To-do</a>
+                </li>
+                <li {% if section == "dashboard" %}class='selected'{% endif %}>
+                    <a href="{% url 'dashboard' %}">Announcements</a>
+                </li>
+                <li {% if section == "dashboard" %}class='selected'{% endif %}>
+                    <a href="{% url 'dashboard' %}">NetScuela tweet</a>
+                </li>
+                <li {% if section == "dashboard" %}class='selected'{% endif %}>
+                    <a href="{% url 'dashboard' %}">Mail</a>
+                </li>
+                <li {% if section == "Account Settings" %}class='selected'{% endif %}>
+                    <a href="{% url 'account_settings' %}">Account Settings</a>
+                </li>
+
+            </ul>
+            {% endif %}
+
+        </div>
+        <div id='content'>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

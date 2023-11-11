@@ -1,0 +1,8 @@
+.home_logo {
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        top: -300%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}

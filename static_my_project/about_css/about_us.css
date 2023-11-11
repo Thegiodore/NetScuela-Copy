@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat&family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(-30deg, #7d0a0a ,#db7373);
+}
+
+.navbar {
+    background-color: rgb(128, 0, 0);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* SVG image style */
+.svg-image {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Navbar name style */
+.navbar-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Image container styles */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+}
+
+/* Text container styles */
+.text-container {
+    max-width: 40%;
+    color: #fff;
+}
+
+.text-container h1 {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 3rem;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+button{
+   width: 200px;
+   height: 50px;
+   background: transparent;
+   border: 2px solid #fff;
+   border-radius: 50px;
+   padding: 10px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 800;
+   text-transform: uppercase;
+   transition: 0.5s ease-in-out;
+
+}
+button a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+button:hover{
+    background-color: #7d0a0a;
+    border: none;
+}
+
+.footer {
+    background-color: rgb(128, 0, 0);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive layout for different screen widths */
+
+
+/* @media(max-width:1300px)
+{
+    .text-container{
+
+    }
+} */
+@media(max-width:1200px)
+{
+    .text-container p{
+        font-size: 12px;
+    }
+    .text-container h1{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container,
+    .text-container {
+        width: 100%;
+        max-width: 90%;
+
+    }
+    .text-container{
+        margin-bottom: 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-name {
+        margin-top: 10px; /* Add some spacing between logo and text */
+    }
+}
+
+@media (max-width: 600px) {
+    .text-container {
+        max-width: 90%;
+    }
+
+    .text-container h1{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    .text-container {
+        max-width: 70%;
+    }
+}

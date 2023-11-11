@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NetScuela</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'img/NetScuela-icon.svg' %}">
+    <link rel="stylesheet" href="{% static 'home_css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'title_css/title.css' %}">
+    <link rel="stylesheet" href="{% static 'home_css/logo.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'sidebar_css/sidebar.css' %}">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>MENU</header>
+        <ul>
+            <li><a href="about_us"><i class="fas fa-question-circle" style="color:gold"></i>About Us</a></li>
+            <li><a href="contact_us"><i class="far fa-envelope" style="color:gold"></i>Contact Us</a></li>
+        </ul>
+    </div>
+</body>
+<body>
+<div class="container">
+<div class="text">
+    <img class="home_logo" src="{%static 'img/NetScuela-icon.svg'%}">
+    <p style="color:white; text-align:center; font-family:'Palatino Linotype'">NetScuela</p><br>
+    <p style="font-family:'Ink Free'">
+     <span class="word wisteria">Learn.</span>
+     <span class="word belize">Create.</span>
+     <span class="word green">Engage.</span>
+    </p>
+    <form>
+
+    </form>
+        <button class="btn-signin" onclick="window.location.href='{% url 'login' %}'">Login</button>
+        <a href='{% url 'register' %}' class="link-signup">Sign Up</a>
+</div>
+</div>
+</body>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/title.js' %}"></script>
+</html>

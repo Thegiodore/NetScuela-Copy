@@ -1,0 +1,36 @@
+body {
+            background-image: url('../img/library.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            style="text-align: center";
+            color: #f6c23e;
+            font-size: 50px;
+        }
+        .login-container {
+            background-color: rgb(128,0,0);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #f6c23e;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>About Us</title>
+		<meta charset="utf-8" />
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'sidebar_css/sidebar.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+        <link rel="stylesheet" href="{% static 'contact_us_css/socials.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+	</head>
+    <body>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>MENU</header>
+            <ul>
+                <li><a href=".."><i class="fas fa-question-circle" style="color:gold"></i>Home</a></li>
+                <li><a href="contact_us"><i class="far fa-envelope" style="color:gold"></i>About Us</a></li>
+            </ul>
+        </div>
+        <section class="team">
+            <h2 class="section-heading">Our Team</h2>
+            <div class="container">
+                <div class="profile">
+                    <img src="{% static 'img/thegio.png' %}" alt=""/><span class="name">Thegiodore Samson</span>
+                </div>
+                <div class="profile">
+                <p><a href="https://www.facebook.com/yehnree/" target="_blank"><img src="{% static 'img/onaire.png' %}" alt=""/><span class="name">Onaire Layug</span></a></p>
+                </div>
+                <div class="profile">
+                    <img src="{% static 'img/joem.png' %}" alt=""/><span class="name">Emmanuel Villena</span>
+                </div>
+                <div class="profile">
+                    <img src="{% static 'img/janessa.jpg' %}" alt=""/><span class="name">Janessa Dimacali</span>
+                </div>
+                <div class="profile">
+                    <img src="{% static 'img/martin.jpg' %}" alt=""/><span class="name">Martin Libunao</span>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

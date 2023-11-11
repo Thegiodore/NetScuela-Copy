@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../img/library.jpg");
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 99.99vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-heading {
+    font-family: "Ink Free", cursive;
+    text-align: center;
+    font-size: 64px;
+    color: maroon;
+    margin: 0 0 70px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .profile {
+    position: relative;
+    transition: all 0.3s;
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile:hover {
+    transform: translateY(25px);
+  }
+
+  .profile img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #f7f7f7;
+    filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+    cursor: pointer;
+  }
+
+  .profile:not(:first-child) img {
+    margin-left: -20px;
+  }
+
+  .profile .name {
+    position: absolute;
+    background-color: gold;
+    color: maroon;
+    font-family: "Bebas Neue", cursive;
+    padding: 15px 30px;
+    border-radius: 100px;
+    bottom: -80px; left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50px);
+    letter-spacing: 1px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .profile .name::before {
+    content: "";
+    position: absolute;
+    width: 15px; height: 15px;
+    background-color: gold;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .profile img:hover + .name {
+    opacity: 1;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+  }
