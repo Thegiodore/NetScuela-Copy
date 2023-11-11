@@ -1,5 +1,4 @@
-{% extends 'contact/base.html' %}
-{% load crispy_forms_tags %}
+{% extends 'emailbase.html' %}
 
 {% block body %}
 <div class="mx-auto my-4 text-center">
@@ -8,7 +7,6 @@
 <div class="container">
     <form action="" method="post">
         {% csrf_token %}
-        {{ form | crispy }}
     <button class="btn btn-success my-3" type="submit">Send message</button>
     </form>
 </div>

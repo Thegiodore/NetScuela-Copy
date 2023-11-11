@@ -29,6 +29,8 @@ urlpatterns = [
     path('contact_us/', contact_us, name='contact_us'),
     path('calendar/', calendar, name='calendar'),
     path('account_settings/', account_settings, name='account_settings'),
+    path('mail/', mail, name='mail'),
+    path('announcement/', announcement, name='announcement'),
     path('account/', include('account.urls')),
     path('contact/', include('contact.urls')),
 ]

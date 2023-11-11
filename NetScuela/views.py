@@ -19,3 +19,9 @@ def calendar(request):
 
 def account_settings(request):
     return render (request, 'account_settings.html')
+
+def mail(request):
+    return render (request, 'mail.html')
+
+def announcement(request):
+    return render (request, 'announcementlist.html')
