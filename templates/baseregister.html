@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'base_css\base.css' %}" rel='stylesheet'>
+    </head>
+    <body>
+        <div id='header'>
+            <img class="logo" src="{%static 'img/NetScuela-icon.svg'%}">
+            {% if request.user.is_authenticated %}
+
+            {% endif %}
+
+        </div>
+        <div id='content'>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
