@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Announcements</title>
+</head>
+<body>
+{% for foo in object_list %}
+    {{ foo.user }}<br>
+    {{ foo.content }}<br>
+    {{ foo.createdAt }}<br>
+{% endfor %}
+</body>
+</html>

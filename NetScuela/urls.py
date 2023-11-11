@@ -33,6 +33,7 @@ urlpatterns = [
     path('announcement/', announcement, name='announcement'),
     path('account/', include('account.urls')),
     path('contact/', include('contact.urls')),
+    path('announcement/', include('announcement.urls'))
 ]
 
 if settings.DEBUG:

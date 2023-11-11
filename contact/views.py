@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 class ContactView(FormView):
-    template_name = 'contact.html'
+    template_name = 'mail.html'
     form_class = ContactForm
     success_url = reverse_lazy('contact:success')
 
