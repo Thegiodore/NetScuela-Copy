@@ -43,6 +43,7 @@ def todo_checklist(request):
     return render(request, 'todo_checklist.html')
 
 
+
 def courses(request):
     return render(request, 'course_list.html')
 
