@@ -4,20 +4,18 @@ from .models import Announcement
 from .forms import AnnouncementModelForm
 
 class AnnouncementListView(ListView):
-    queryset = Announcement.objects.all()
+    model = Announcement
     template_name = 'announcementlist.html'
+    context_object_name = 'announcements'
 
 class AnnouncementDetailView(DetailView):
+    model = Announcement
     template_name = 'announcementdetail.html'
-
-    def get_object(self, query=Announcement.objects.all()):
-        print(self.kwargs)
-        pk = self.kwargs.get("pk")
-        print(pk)
-        return Announcement.objects.get(id=pk)
+    context_object_name = 'announcement'
 
 
 class AnnouncementCreateView(CreateView):
+    model = Announcement
     template_name = 'announcementcreate.html'
     form_class = AnnouncementModelForm
     success_url = "/announcement/"

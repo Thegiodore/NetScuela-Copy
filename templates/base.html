@@ -30,7 +30,7 @@
                     <a href="{% url 'post_list' %}">NetScuela tweet</a>
                 </li>
                 <li {% if section == "Mail" %}class='selected'{% endif %}>
-                    <a href="{% url 'mail' %}">Mail</a>
+                    <a href="{% url 'contact:mail' %}">Mail</a>
                 </li>
                 <li {% if section == "Account Settings" %}class='selected'{% endif %}>
                     <a href="{% url 'account_settings' %}">Account Settings</a>

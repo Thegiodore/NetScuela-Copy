@@ -1,13 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'emailbase.html' %}
+{% load crispy_forms_tags %}
 
-{% block content %}
-<div>
+{% block body %}
+<div class="mx-auto my-4 text-center">
     <h1>Contact Us</h1>
 </div>
-<div>
+<div class="container">
     <form action="" method="post">
         {% csrf_token %}
-    <button type="submit">Send message</button>
+        {{ form | crispy }}
+    <button class="btn btn-success my-3" type="submit">Send message</button>
     </form>
 </div>
 {% endblock %}

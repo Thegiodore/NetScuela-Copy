@@ -3,11 +3,14 @@
 {% block title %}Announcements{% endblock %}
 
 {% block content %}
-    {% for foo in object_list %}
-        <a href="{% url 'notifydetail' %}">
-            {{ foo.user }}<br>
-            {{ foo.content }}<br>
-            {{ foo.createdAt }}<br>
-        </a>
-    {% endfor %}
+    <ul>
+        {% for announcement in announcements %}
+            <a href="{% url 'notifydetail' announcement.pk %}">
+                {{ announcement.user }}<br>
+                {{ announcement.content }}<br>
+                {{ announcement.createdAt }}<br>
+            </a>
+        {% endfor %}
+    </ul>
+<a href="{% url 'notifycreate' %}">Add Announcement</a>
 {% endblock %}
