@@ -20,6 +20,6 @@ class AnnouncementDetailView(DetailView):
 class AnnouncementCreateView(CreateView):
     template_name = 'announcementcreate.html'
     form_class = AnnouncementModelForm
-    success_url = "/"
+    success_url = "../"
 
 # Create your views here.
