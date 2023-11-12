@@ -13,12 +13,11 @@ def course_detail(request):
     course = get_object_or_404(Course, pk=pk)
     return render(request, 'course_detail.html', {'course': course})
 
-def course_new(request):
+def course_create(request):
     if request.method == "POST":
-        form =  CourseForm(request.POST)
+        form = CourseForm(request.POST)
         if form.is_valid():
-            course = form.save(commit=False)
-            course.save()
+            course = form.save()
             return redirect('course_detail', pk=course.pk)
     else:
         form = CourseForm()
@@ -29,8 +28,7 @@ def course_edit(request, pk):
     if request.method == "POST":
         form = CourseForm(request.POST, instance=course)
         if form.is_valid():
-            course = form.save(commit=False)
-            course.save()
+            course = form.save()
             return redirect('course_detail', pk=course.pk)
     else:
         form = CourseForm(instance=course)

@@ -1,12 +1,10 @@
-{% extends "base.html" %}
-
-{% block title %}Courses{% endblock %}
+{% extends 'base.html' %}
 
 {% block content %}
-    {% for foo in object_list %}
-        <a href="{% url 'course_detail' %}">
-            {{ foo.name }}<br>
-            {{ foo.description }}<br>
-        </a>
+  <h2>Courses</h2>
+  <ul>
+    {% for course in courses %}
+      <li><a href="{% url 'course_detail' subject.id %}">{{ course.name }}</a></li>
     {% endfor %}
+  </ul>
 {% endblock %}
