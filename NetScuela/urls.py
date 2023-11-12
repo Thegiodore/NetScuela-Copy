@@ -32,12 +32,11 @@ urlpatterns = [
     path('calendar/', calendar, name='calendar'),
     path('account_settings/', account_settings, name='account_settings'),
     path('mail/', mail, name='mail'),
-    path('announcement/', announcement, name='announcement'),
     path('todo_checklist/', todo_checklist, name='todo_checklist'),
     path('account/', include('account.urls')),
     path('contact/', include('contact.urls')),
     path('announcement/', include('announcement.urls')),
-    path('course/', include('courses.urls')),
+    path('courses/', include('courses.urls')),
     path('blog/', include('Blog.urls')),
     path('create_posts/', include('Blog.urls')),
 ]

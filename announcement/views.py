@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.views.generic import DetailView, ListView, CreateView
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import DetailView, ListView, CreateView, DeleteView
 from .models import Announcement
 from .forms import AnnouncementModelForm
 
@@ -20,6 +20,8 @@ class AnnouncementDetailView(DetailView):
 class AnnouncementCreateView(CreateView):
     template_name = 'announcementcreate.html'
     form_class = AnnouncementModelForm
-    success_url = "../"
+    success_url = "/announcement/"
+
+#class AnnouncementDeleteView(DeleteView):
 
 # Create your views here.

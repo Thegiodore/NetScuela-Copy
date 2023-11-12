@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>{{ subject.name }}</h2>
-  <p>{{ subject.description }}</p>
+    <h2>{{ course.name }}</h2>
+    <p>{{ course.description }}</p>
+
+    <h1>Assignments</h1>
+    <ul>
+        {% for assignment in course.assignment_set.all %}
+            <li>{{ assignment.title }} - {{ assignment.description }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'assignment_create' course_id=course.pk %}">Create Assignment</a>
 {% endblock %}

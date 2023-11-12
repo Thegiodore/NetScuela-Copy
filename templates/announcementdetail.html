@@ -1,5 +1,7 @@
-{% extends "baseregister.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-    {{ object }}
+    <h2>{{ announcement.content }}</h2>
+    <p> {{ announcement.user }}</p>
+    <p>{{ announcement.createdAt }}</p>
 {% endblock %}
