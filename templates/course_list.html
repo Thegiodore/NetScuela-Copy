@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+    {% for foo in object_list %}
+        <a href="{% url 'course_detail' %}">
+            {{ foo.name }}<br>
+            {{ foo.description }}<br>
+        </a>
+    {% endfor %}
+{% endblock %}
