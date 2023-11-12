@@ -19,6 +19,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from Blog.models import CreatePost
+from Blog.views import *
 from .views import home
 from .views import *
 
@@ -36,6 +38,8 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('announcement/', include('announcement.urls')),
     path('course/', include('courses.urls')),
+    path('blog/', include('Blog.urls')),
+    path('create_posts/', include('Blog.urls')),
 ]
 
 if settings.DEBUG:

@@ -26,8 +26,8 @@
                 <li {% if section == "Announcement" %}class='selected'{% endif %}>
                     <a href="{% url 'notifylist' %}">Announcements</a>
                 </li>
-                <li {% if section == "dashboard" %}class='selected'{% endif %}>
-                    <a href="{% url 'dashboard' %}">NetScuela tweet</a>
+                <li {% if section == "Netscuela tweet" %}class='selected'{% endif %}>
+                    <a href="{% url 'post_list' %}">NetScuela tweet</a>
                 </li>
                 <li {% if section == "Mail" %}class='selected'{% endif %}>
                     <a href="{% url 'mail' %}">Mail</a>
