@@ -14,17 +14,17 @@
                 <li {% if section == "dashboard" %}class='selected'{% endif %}>
                     <a href="{% url 'dashboard' %}">My dashboard</a>
                 </li>
-                <li {% if section == "dashboard" %}class='selected'{% endif %}>
-                    <a href="{% url 'dashboard' %}">Course Shells</a>
+                <li {% if section == "Course Shells" %}class='selected'{% endif %}>
+                    <a href="{% url 'course_list' %}">Course Shells</a>
                 </li>
                 <li {% if section == "Calendar" %}class='selected'{% endif %}>
                     <a href="{% url 'calendar' %}">Calendar</a>
                 </li>
-                <li {% if section == "dashboard" %}class='selected'{% endif %}>
-                    <a href="{% url 'dashboard' %}">To-do</a>
+                <li {% if section == "To-do" %}class='selected'{% endif %}>
+                    <a href="{% url 'todo_checklist' %}">To-do</a>
                 </li>
                 <li {% if section == "Announcement" %}class='selected'{% endif %}>
-                    <a href="{% url 'announcement' %}">Announcements</a>
+                    <a href="{% url 'notifylist' %}">Announcements</a>
                 </li>
                 <li {% if section == "dashboard" %}class='selected'{% endif %}>
                     <a href="{% url 'dashboard' %}">NetScuela tweet</a>
