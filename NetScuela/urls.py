@@ -31,7 +31,7 @@ urlpatterns = [
     path('contact_us/', contact_us, name='contact_us'),
     path('calendar/', calendar, name='calendar'),
     path('account_settings/', account_settings, name='account_settings'),
-    path('mail/', mail, name='mail'),
+    path('emailapp/', include('emailapp.urls')),
     path('todo_checklist/', todo_checklist, name='todo_checklist'),
     path('account/', include('account.urls')),
     path('announcement/', include('announcement.urls')),
