@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-from Blog.models import Post
-
 
 def home(request):
     return render(request, 'home.html')
@@ -50,16 +48,3 @@ def courses(request):
 
 def dashboard(request):
     return render(request, 'dashboard.html')
-
-
-def blog(request):
-    return render(request, 'Blog.html')
-
-
-def post_list(request):
-    posts = Post.objects.all()
-    return render(request, 'Blog/post_list.html', {'posts': posts})
-
-
-def create_posts(request):
-    return render(request, 'Blog/create_blog.html')

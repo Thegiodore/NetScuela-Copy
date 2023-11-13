@@ -34,11 +34,8 @@ urlpatterns = [
     path('mail/', mail, name='mail'),
     path('todo_checklist/', todo_checklist, name='todo_checklist'),
     path('account/', include('account.urls')),
-    path('contact/', include('contact.urls')),
     path('announcement/', include('announcement.urls')),
     path('courses/', include('courses.urls')),
-    path('blog/', include('Blog.urls')),
-    path('create_posts/', include('Blog.urls')),
 ]
 
 if settings.DEBUG:
