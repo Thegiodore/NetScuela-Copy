@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>To-Do List</h1>
+    <ul>
+        {% for assignment in current_assignments %}
+
+            <li>{{ assignment.course.name }}<br>{{ assignment.title }} - Due on: {{ assignment.deadline }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Delete Announcement</h2>
+    <p>Are you sure you want to delete the announcement "{{ object }}"?</p>
+    <form method="post" action="">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+    </form>
+{% endblock %}

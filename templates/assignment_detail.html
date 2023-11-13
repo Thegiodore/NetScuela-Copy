@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ assignment.title }}</h1>
+    <p>{{ assignment.description }}</p>
+    <p>Deadline: {{ assignment.deadline }}</p>
+    {% if assignment.file_upload %}
+        <p>File: <a href="{{ assignment.file_upload.url }}" target="_blank">{{ assignment.file_upload.name }}</a></p>
+    {% endif %}
+
+    <form method="post" action="{% url 'assignment_detail' pk=assignment.pk %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file_upload">Upload File:</label>
+        <input type="file" name="file_upload" id="file_upload">
+        <button type="submit">Upload</button>
+    </form>
+    {% if user.is_staff %}
+        <a href="{% url 'assignment_delete' pk=assignment.pk %}">Delete Assignment</a>
+    {% endif %}
+{% endblock %}

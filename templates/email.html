@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Email{% endblock %}
+{% block headcontent %}
+    <meta charset="UTF-8">
+{% endblock %}
+{% block content %}
+    <form method="post" action=".">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <button>Submit</button>
+    </form>
+{% endblock %}
