@@ -13,5 +13,7 @@
             <li><a href="{% url 'assignment_detail' pk=assignment.pk %}">{{ assignment.title }} - {{ assignment.description }}</a></li>
         {% endfor %}
     </ul>
+    {% if user.is_staff %}
     <a href="{% url 'assignment_create' course_id=course.pk %}">Create Assignment</a>
+    {% endif %}
 {% endblock %}

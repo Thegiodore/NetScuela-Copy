@@ -12,5 +12,7 @@
             </a>
         {% endfor %}
     </ul>
-<a href="{% url 'notifycreate' %}">Add Announcement</a>
+     {% if user.is_staff %}
+         <a href="{% url 'notifycreate' %}">Add Announcement</a>
+     {% endif %}
 {% endblock %}

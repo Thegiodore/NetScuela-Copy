@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView, CreateView, DeleteView
 from .models import Announcement
 from .forms import AnnouncementModelForm
@@ -20,6 +20,10 @@ class AnnouncementCreateView(LoginRequiredMixin, StaffRequiredMixin, CreateView)
     template_name = 'announcementcreate.html'
     form_class = AnnouncementModelForm
     success_url = "/announcement/"
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 class AnnouncementDeleteView(StaffRequiredMixin, DeleteView):
     model = Announcement

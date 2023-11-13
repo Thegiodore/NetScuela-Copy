@@ -3,6 +3,8 @@ from django.views.generic import ListView, DetailView, CreateView, DeleteView, U
 from .models import Course, Assignment
 from .forms import CourseForm, AssignmentForm
 from django.urls import reverse_lazy
+from django.utils import timezone
+from NetScuela.mixins import StaffRequiredMixin
 
 # Create your views here.
 
@@ -16,7 +18,7 @@ class CourseDetailView(DetailView):
     template_name = 'course_detail.html'
     context_object_name = 'course'
 
-class CourseCreateView(CreateView):
+class CourseCreateView(StaffRequiredMixin, CreateView):
     model = Course
     form_class = CourseForm
     template_name = 'course_create.html'
