@@ -1,10 +1,10 @@
-{#{% extends 'base.html' %}#}
-{##}
-{#{% block content %}#}
-{#  <h2>Edit Course</h2>#}
-{#  <form method="post" action="{% url 'course_edit' course.id %}">#}
-{#    {% csrf_token %}#}
-{#    {{ form.as_p }}#}
-{#    <button type="submit">Save changes</button>#}
-{#  </form>#}
-{#{% endblock %}#}
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Edit Course</h2>
+  <form method="post" action="{% url 'course_edit' course.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save changes</button>
+  </form>
+{% endblock %}

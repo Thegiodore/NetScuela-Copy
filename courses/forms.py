@@ -9,4 +9,7 @@ class CourseForm(forms.ModelForm):
 class AssignmentForm(forms.ModelForm):
     class Meta:
         model = Assignment
-        fields = ['title', 'description']
+        fields = ['title', 'description', 'deadline']
+        widgets = {
+            'deadline': forms.DateInput(attrs={'type': 'date'})
+        }

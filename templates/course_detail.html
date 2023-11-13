@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{{ course.name }}</h2>
+    <h1>{{ course.name }}</h1>
     <p>{{ course.description }}</p>
-
-    <h1>Assignments</h1>
+    {% if user.is_staff %}
+        <a href="{% url 'course_update' pk=course.pk %}">Update Course</a><br>
+        <a href="{% url 'course_delete' pk=course.pk %}">Delete Course</a>
+    {% endif %}
+    <h2>Assignments</h2>
     <ul>
         {% for assignment in course.assignment_set.all %}
-            <li>{{ assignment.title }} - {{ assignment.description }}</li>
+            <li><a href="{% url 'assignment_detail' pk=assignment.pk %}">{{ assignment.title }} - {{ assignment.description }}</a></li>
         {% endfor %}
     </ul>
     <a href="{% url 'assignment_create' course_id=course.pk %}">Create Assignment</a>

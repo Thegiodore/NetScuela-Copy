@@ -13,6 +13,8 @@ class Assignment(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     description = models.TextField()
+    deadline = models.DateTimeField()
+    file_upload = models.FileField(upload_to='assignment_files/', blank=True, null=True)
 
     def __str__(self):
         return self.title

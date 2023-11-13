@@ -4,4 +4,7 @@
     <h2>{{ announcement.content }}</h2>
     <p> {{ announcement.user }}</p>
     <p>{{ announcement.createdAt }}</p>
+    {% if user.is_staff %}
+        <a href="{% url 'notifydelete' pk=announcement.pk %}">Delete Announcement</a>
+    {% endif %}
 {% endblock %}
